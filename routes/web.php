@@ -21,11 +21,5 @@ Route::get('/', function () {
 Route::get('/github-score', [GithubController::class, 'score']);
 Route::get('/github-pr', [GithubController::class, 'formatPR']);
 
-Route::get('/examples', function () {
-    $names = collect(['Adam', 'Tracy', 'Ben', 'Beatrice', 'Kyle']);
-
-    return $names->first(
-        fn($name) => $name[0] == 'Z',
-        fn() => throw new \Exception('No matching name found!')
-    );
-});
+Route::get('/posts', [App\Http\Controllers\PostTagController::class, 'index']);
+Route::get('/posts/{post}/update', [App\Http\Controllers\PostTagController::class, 'update']);
