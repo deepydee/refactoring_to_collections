@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GithubScoreController;
+use App\Http\Controllers\GithubController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/github-score', GithubScoreController::class);
+Route::get('/github-score', [GithubController::class, 'score']);
+Route::get('/github-pr', [GithubController::class, 'formatPR']);
