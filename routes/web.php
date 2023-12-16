@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LampsAndWalletsController;
+use App\Http\Controllers\CompareMonthlyRevenueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lamps', LampsAndWalletsController::class);
+Route::get('/revenue', CompareMonthlyRevenueController::class);
