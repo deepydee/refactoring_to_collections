@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CompareMonthlyRevenueController;
+use App\Http\Controllers\BuildingLookupTableController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/revenue', CompareMonthlyRevenueController::class);
+Route::get('/lookup-table', BuildingLookupTableController::class);
