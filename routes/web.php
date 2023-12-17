@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TransportFormInputController;
+use App\Http\Controllers\RankingCompetitionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form-transport', TransportFormInputController::class);
+Route::get('/ranking', RankingCompetitionController::class);
