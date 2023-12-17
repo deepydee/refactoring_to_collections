@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BuildingLookupTableController;
+use App\Http\Controllers\TransportFormInputController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lookup-table', BuildingLookupTableController::class);
+Route::get('/form-transport', TransportFormInputController::class);
